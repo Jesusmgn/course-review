@@ -14,10 +14,11 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+
 <body class="font-sans antialiased bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
     <div class="min-h-screen flex flex-col">
 
-        {{-- 🔹 Barra de navegación principal --}}
+        {{-- 🔹 Barra de navegación --}}
         @include('layouts.navigation')
 
         {{-- 🔹 Encabezado (si existe) --}}
@@ -32,11 +33,12 @@
         {{-- 🔹 Contenido principal --}}
         <main class="flex-1">
             <div class="max-w-7xl mx-auto p-6 sm:p-8">
+                {{-- AQUI VA LA SECCIÓN CONTENT DE TUS VISTAS --}}
                 @yield('content')
             </div>
         </main>
 
-        {{-- 🔹 Footer simple --}}
+        {{-- 🔹 Footer --}}
         <footer class="bg-gray-800 text-gray-400 text-center py-4 text-sm border-t border-gray-700">
             © {{ date('Y') }} {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.
         </footer>

@@ -26,7 +26,6 @@
         <table class="w-full border-collapse text-[16px]">
             <thead>
                 <tr class="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-lg">
-                    <th class="px-4 py-3 text-left">ID</th>
                     <th class="px-4 py-3 text-left">Título</th>
                     <th class="px-4 py-3 text-left">Instructor</th>
                     <th class="px-4 py-3 text-left">Descripción</th>
@@ -37,7 +36,6 @@
             <tbody>
                 @forelse ($courses as $course)
                     <tr class="border-b dark:border-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all">
-                        <td class="px-4 py-3 font-semibold">{{ $course->id }}</td>
                         <td class="px-4 py-3 font-semibold">{{ $course->title }}</td>
                         <td class="px-4 py-3">{{ $course->instructor }}</td>
                         <td class="px-4 py-3">{{ Str::limit($course->description, 80) }}</td>
